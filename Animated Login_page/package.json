@@ -1,0 +1,14 @@
+{
+  "name": "animated-login",
+  "version": "1.0.0",
+  "description": "Simple Animated Login Form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Login"
+  ],
+  "author": "Beloved Adetola",
+  "license": "ISC"
+}

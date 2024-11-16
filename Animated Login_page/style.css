@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('./images/mycursor\ copy.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container{
+    position: relative;
+    padding: 50px;
+    background: #df5656;
+    box-shadow: -55px -55px 10px rgba(0, 0, 0, 0.1);
+}
+.container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    background: #ce3f3f;
+    transform: skewY(45deg);
+    transform-origin: bottom right;
+}
+.container::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background: #ce3f3f;
+    transform: skewX(45deg);
+    transform-origin: bottom right;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h2{
+    color: #fde8e8;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+}
+
+.container .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 40px;
+}
+
+.container .inputBox input{
+    position: relative;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.container .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    font-size: 1em;
+    transition: .5s;
+    letter-spacing: .1em;
+    color: #d8d8d8;
+    text-transform: uppercase;
+}
+
+.container .inputBox input:valid ~ span,
+.container .inputBox input:focus ~ span{
+    color: #131313;
+    font-size: .85em;
+    transform: translateY(-30px);
+}
+
+.container .inputBox i{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, #0683b4, #ad0311);
+    left: 0;
+    bottom: 0;
+    transition: .5s;
+    pointer-events: none;
+    z-index: 1;
+}
+.container .inputBox input:valid ~ i,
+.container .inputBox input:focus ~ i{
+    height: 100%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.container .links{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.container .links a{
+    text-decoration: none;
+    color: #0f12dab4;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1em;
+    font-size: .75em;
+}
+
+.container .links a:nth-child(2){
+    color: #700000d3;
+}
+
+.container .inputBox input[type="submit"]{
+    background: #2195f333;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+.container .inputBox input[type="submit"]:hover{
+    background: #0683b4;
+}
